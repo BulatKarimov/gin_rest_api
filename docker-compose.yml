@@ -20,8 +20,10 @@ services:
     environment:
       - PORT=8080
       - DB_URL=host=localhost port=5433 user=postgres dbname=gin_rest_api sslmode=disable password=112233
-    
+    volumes:
+      - ./app.env:/app.env
 volumes:
     postgres:
     pgadmin:
+    
   
