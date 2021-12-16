@@ -1,3 +1,3 @@
 development:
   driver: postgres
-  open: host=localhost user=postgres dbname=gin_rest_api sslmode=disable password=112233
+  open: $DB_URL

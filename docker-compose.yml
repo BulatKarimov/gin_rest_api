@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  postgres:
+    container_name: postgres_container
+    image: postgres:13.3
+    environment:
+      POSTGRES_DB: "gin_rest_api"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "112233"
+    ports:
+      - "5433:5432"
+    volumes:
+       - postgres:/data/postgres
+  server:
+    build:
+      context: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - DB_URL=host=localhost port=5433 user=postgres dbname=gin_rest_api sslmode=disable password=112233
+    
+volumes:
+    postgres:
+    pgadmin:
+  
