@@ -3,7 +3,7 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/BulatKarimov/gin_rest_api/app/api_server/models"
+	"github.com/BulatKarimov/gin_rest_api/internal/api_server/models"
 	"github.com/gin-gonic/gin"
 )
 
